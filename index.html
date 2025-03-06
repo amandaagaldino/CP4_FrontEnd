@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
-
-    <title>Gerenciandor de Tarefas</title>
+    <title>Gerenciador de Tarefas Diárias</title>
+   
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Gerenciandor de Tarefas</h1>
 
-    <form>
+<body>
+  
+    <header>
+        <h1>Gerenciador de Tarefas Diárias</h1>
+    </header>
+  
+    <form id="formAdicionarTarefa">
         <fieldset>
-            <legend>Adicione suas Tarefas</legend>
-            <div>
-                <input type="text" id="tarefaInput" placeholder="Digite sua tarefa">
-                <button id="addTarefa">Adicionar</button>
-                <button id="filtrarPendentes">filtrar Pendentes</button>
-            </div>
+            <legend>Adicionar Nova Tarefa</legend>
+            <input type="text" id="tarefaInput" placeholder="Digite uma tarefa" required>
+            <button type="submit">Adicionar Tarefa</button>
         </fieldset>
     </form>
+  
+    <button id="filtrarPendentesBtn">Filtrar Pendentes</button>
+    
+    <ul id="listaTarefas"></ul>
 
-    <ul id="listaAtividades"></ul>
+  <script src="script.js"></script>
 </body>
 </html>
