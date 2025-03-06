@@ -1,6 +1,10 @@
 :root{
-    --cor-azul-escuro: #002b5b;
+    --cor-azul-fundo: #002b5b;
+    --cor-azul-claro: #66b2ff;
+    --cor-azul-medio: #5f86ae;
     --cor-branca: #fff;
+    --cor-vermelha: #c94c4c;
+    --cor-vermelho-escuro: #a83d3d;
     --fonte: Arial, sans-serif;
 }
 
@@ -12,7 +16,7 @@
 
 body {
     font-family: var(--fonte);
-    background-color: var(--cor-azul-escuro);
+    background-color: var(--cor-azul-fundo);
     color: var(--cor-branca);
     text-align: center;
     padding: 20px;
@@ -29,7 +33,7 @@ fieldset{
 }
 
 #formAdicionarTarefa {
-    background-color: #66b2ff;
+    background-color: var(--cor-azul-claro);
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -59,7 +63,7 @@ input[type="text"] {
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
-    background-color: white;
+    background-color: var(--cor-branca);
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -70,3 +74,54 @@ input[type="text"] {
     background-color: lightgray;
 }
 
+#filtrarPendentesBtn {
+    background-color: var(--cor-vermelha);
+    color: var(--cor-branca);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+    width: 200px; 
+    text-align: center;
+}
+
+#filtrarPendentesBtn:hover {
+    background-color: var(--cor-vermelho-escuro);
+}
+
+/* Lista de tarefas */
+#listaTarefas {
+    list-style: none;
+    padding: 0;
+}
+
+#listaTarefas li {
+    background-color: var(--cor-azul-medio);
+    margin: 10px auto;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão concluir tarefa */
+#listaTarefas button {
+    background-color: var(--cor-branca);
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+#listaTarefas button:hover {
+    background-color: lightgray;
+}
