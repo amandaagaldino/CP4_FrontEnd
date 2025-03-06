@@ -15,4 +15,4 @@ Este projeto é um **Gerenciador de Tarefas Diárias**, que permite ao usuário 
 
 ## Autor
 
-Desenvolvido por **Amanda Galdino**.
+Desenvolvido por **Amanda Galdino** (RM560066)
