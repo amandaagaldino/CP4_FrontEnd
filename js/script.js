@@ -4,15 +4,15 @@ let tarefas = [{
     concluida: false
   }];
   
-  // Função para exibir as tarefas
+  // Exibir as tarefas
   function exibirTarefas() {
     const listaTarefas = document.getElementById('listaTarefas');
-    listaTarefas.innerHTML = '';  // Limpa a lista antes de exibir
+    listaTarefas.innerHTML = '';  
   
     tarefas.forEach(tarefa => {
       const li = document.createElement('li');
       
-      // Condicional para alterar o texto do botão baseado no status da tarefa
+      // Botão concluido
       const statusBotao = tarefa.concluida ? 'Concluído' : 'Concluir';
   
       li.innerHTML = `
@@ -29,17 +29,17 @@ let tarefas = [{
   
     const tarefaInput = document.getElementById('tarefaInput');
     const novaTarefa = {
-      id: tarefas.length + 1,  // Id baseado no comprimento do array
+      id: tarefas.length + 1,  
       titulo: tarefaInput.value,
       concluida: false
     };
-    tarefas = [...tarefas, novaTarefa];  // Usando spread para adicionar tarefa
+    tarefas = [...tarefas, novaTarefa];  // Usando spread para adicinar tarefa
     tarefaInput.value = '';  // Limpa o input
     exibirTarefas();  // Exibe a lista de tarefas
     alert('Tarefa adicionada com sucesso!');  // Mensagem de sucesso
   });
   
-  // Função para marcar a tarefa como concluída
+  // Marca a tarefa como concluída
   function concluirTarefa(id) {
     tarefas = tarefas.map(tarefa => 
       tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
