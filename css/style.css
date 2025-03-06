@@ -50,7 +50,7 @@ legend {
     margin-bottom: 15px;
 }
 
-input[type="text"] {
+#formAdicionarTarefa input {
     padding: 10px;
     width: 90%;
     border: none;
